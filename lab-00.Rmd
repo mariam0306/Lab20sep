@@ -17,15 +17,15 @@ We set up the data frame. Edit the data below to include information about your 
 
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
+  name = c("Mariam", "Kiki", "Fransesca", 
            "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
+  github_username = c("mariam0306", "kiki-xox", "username 2", 
                       "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
+  colour = c("turquoise", "blue", "colour 2", 
              "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
+  hobby = c("reading", "football", "hobby 2", 
             "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  favourite_number = c(3, 4, NA, NA, NA)
   )
 
 team_data
@@ -47,19 +47,19 @@ p1
 ```
 
 
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+I see a bar chart where the x-axis shows the username of every member and a bar that rises up to their favourite number, as displayed on the y-axis.The colour of the bars of the bar chart are the favourite colour of the group member.
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
-          title = "Insert text here")
+p1 + labs(x = "Github username", 
+          y = "Favourite number",
+          title = "Favourite colour and number of team's github users")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
+The labs command allows you to change the labels of a graph or plot.
 
 ### Exercise 20
 
@@ -69,4 +69,4 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+This bar chart is a bad visualisation as it shows how many people do which hobby , not who does which hobby, and could only be more useful if more than one person does each hobby. Furthermore, if there were more hobbies, the graph would get far too wide and untidy. I would recommend a visualisation which allows the display of what each user's hobby is, rather than how many user's correspond to each hobby.
